@@ -22,13 +22,13 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <div>
+    <div className="dashboard-content">
       <h1>Women Cyclists in France Dashboard</h1>
       <div>
         <h3>Clubs: {clubCount}</h3>
         <h3>Cyclists: {cyclistCount}</h3>
       </div>
-      <div>
+      <div className="page-links">
         <Link to="/clubs">View Clubs</Link> | <Link to="/cyclists">View Cyclists</Link>
       </div>
     </div>
