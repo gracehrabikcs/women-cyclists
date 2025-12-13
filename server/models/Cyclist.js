@@ -1,21 +1,26 @@
 const mongoose = require("mongoose");
 
-const CyclistSchema = new mongoose.Schema(
-  {
-    ID_coureuse: Number,
-    nom: String,
-    prenom: String,
-    surnom: String,
-    dateNaiss: String,
-    dateMort: String,
-    fonctions: String,
-    ID_club: Number,
-    ID_comite: String,
-    remarque_coureuse: String
-  },
-  {
-    collection: "cyclists" 
-  }
-);
+const cyclistSchema = new mongoose.Schema({
+  ID_coureuse: { type: Number, required: true },
+  nom: { type: String, required: true },
+  prenom: { type: String, default: "" },
+  dateNaiss: { type: String, default: "0" },
+  dateMort: { type: String, default: "0" },
+  fonctions: { type: String, default: "" },
+  ID_club: { type: Number, default: 0 },
+  ID_comite: { type: String, default: "" },
+  remarque_coureuse: { type: String, default: "" }
+}, {
+  versionKey: false,   
+  timestamps: false  
+});
 
-module.exports = mongoose.model("Cyclist", CyclistSchema);
+
+cyclistSchema.set("toJSON", {
+  transform: (doc, ret) => {
+    delete ret._id;
+    return ret;
+  }
+});
+
+module.exports = mongoose.model("Cyclist", cyclistSchema);
