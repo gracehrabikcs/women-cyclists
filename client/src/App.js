@@ -1,16 +1,26 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
-import React from "react";
-import ClubList from "./components/ClubList";
-import CyclistList from "./components/CyclistList";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Dashboard from "./components/Dashboard";
+import ClubsPage from "./pages/ClubsPage";
+import CyclistsPage from "./pages/CyclistsPage";
+import ClubDetail from "./pages/ClubDetail";
+import CyclistDetail from "./pages/CyclistDetail";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Women Cyclists in France</h1>
-      <ClubList />
-      <CyclistList />
-    </div>
+    <Router>
+      <nav>
+        <Link to="/">Dashboard</Link> |{" "}
+        <Link to="/clubs">Clubs</Link> |{" "}
+        <Link to="/cyclists">Cyclists</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/clubs" element={<ClubsPage />} />
+        <Route path="/cyclists" element={<CyclistsPage />} />
+        <Route path="/clubs/:id" element={<ClubDetail />} />
+        <Route path="/cyclists/:id" element={<CyclistDetail />} />
+      </Routes>
+    </Router>
   );
 }
 
