@@ -16,5 +16,6 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/cyclists", require("./routes/cyclists"));
+app.use("/api/clubs", require("./routes/clubs"));
 
 app.listen(5000, () => console.log("Server running on port 5000"));

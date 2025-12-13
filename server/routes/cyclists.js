@@ -1,14 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const Cyclist = require("../models/Cyclist");
+const cyclistController = require("../controllers/cyclistController");
 
-router.get("/", async (req, res) => {
-  try {
-    const cyclists = await Cyclist.find();
-    res.json(cyclists);
-  } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
-});
+router.get("/", cyclistController.getAllCyclists);
+router.get("/:id", cyclistController.getCyclistById);
+router.post("/", cyclistController.createCyclist);
+router.put("/:id", cyclistController.updateCyclist);
+router.delete("/:id", cyclistController.deleteCyclist);
 
 module.exports = router;

@@ -14,7 +14,7 @@ const CyclistSchema = new mongoose.Schema(
     remarque_coureuse: String
   },
   {
-    collection: "cyclists"   // 👈 IMPORTANT
+    collection: "cyclists" 
   }
 );
 
