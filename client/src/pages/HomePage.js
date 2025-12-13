@@ -17,13 +17,25 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Women Cyclists in France Dashboard</h1>
-      <div>Clubs: {clubCount}</div>
-      <div>Cyclists: {cyclistCount}</div>
-      <div>
-        <Link to="/clubs">View Clubs</Link> | <Link to="/cyclists">View Cyclists</Link>
-      </div>
+    <div id="wrapper">
+      <header id="header">
+        <h1>Women Cyclists in France Dashboard</h1>
+      </header>
+
+      <section id="main">
+        <div className="inner">
+          <div style={{ marginBottom: "2rem" }}>
+            <h2>Overview</h2>
+            <p>Clubs: {clubCount}</p>
+            <p>Cyclists: {cyclistCount}</p>
+          </div>
+
+          <div>
+            <Link to="/clubs" className="button">View Clubs</Link>
+            <Link to="/cyclists" className="button" style={{ marginLeft: "1rem" }}>View Cyclists</Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

@@ -4,6 +4,7 @@ import ClubsPage from "./pages/ClubsPage";
 import CyclistsPage from "./pages/CyclistsPage";
 import ClubDetail from "./pages/ClubDetail";
 import CyclistDetail from "./pages/CyclistDetail";
+import './App.css';
 
 function App() {
   return (
