@@ -21,15 +21,17 @@ const ClubsPage = () => {
   );
 
   return (
-    <div>
+    <div className="clubs-page-content">
       <h1>Clubs</h1>
-      <input
-        type="text"
-        placeholder="Search clubs"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
-      <ClubForm fetchClubs={fetchClubs} />
+      <div className="club-controls">
+        <input
+          type="text"
+          placeholder="Search clubs"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        <ClubForm fetchClubs={fetchClubs} />
+      </div>
       <ul>
         {filteredClubs.map(club => (
           <li key={club.ID_club}>

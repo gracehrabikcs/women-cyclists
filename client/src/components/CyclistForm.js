@@ -37,7 +37,7 @@ const CyclistForm = ({ fetchCyclists }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="cyclist-form">
       <input
         type="text"
         placeholder="Last Name"

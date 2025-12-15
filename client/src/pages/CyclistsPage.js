@@ -26,15 +26,18 @@ const CyclistsPage = () => {
   );
 
   return (
-    <div>
+    <div className="cyclist-page-content">
       <h1>Cyclists</h1>
-      <input
-        type="text"
-        placeholder="Search cyclists"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
-      <CyclistForm fetchCyclists={fetchCyclists} />
+      <div className="cyclist-controls">
+        <input
+          type="text"
+          placeholder="Search cyclists"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        <CyclistForm fetchCyclists={fetchCyclists} />
+      </div>
+
       <ul>
         {filteredCyclists.map(c => (
           <li key={c.ID_coureuse}>

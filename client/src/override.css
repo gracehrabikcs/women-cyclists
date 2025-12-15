@@ -1,20 +1,19 @@
 /* override css for spacing/margins/padding issues */
 
 .home-page-content {
-  margin-left: 1.5rem;
-  h2 {
-    margin-bottom: 1.5rem; 
-    margin-top: 1.5rem;
-    text-align: center;
-  }
-  p {
-    margin-bottom: 1.5rem; 
-    margin-top: 1.5rem;
-    text-align: center;
-
-  }
-
+  margin: 1.5rem;
 }
+
+.home-page-content h2 {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.home-page-content p {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
 
 .main-nav {
   margin-left: 1.5rem;
@@ -26,4 +25,87 @@
   gap: 1.5rem;
 }
 
+.clubs-page-content {
+  margin: 1.5rem;
 
+}
+/* Horizontal controls row */
+.club-controls {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* Make search input wider */
+.club-controls input[type="text"] {
+  max-width: 250px;
+}
+
+/* Club form inline */
+.club-form {
+  display: flex;
+  align-items: center;
+}
+
+/* Kill HTML5 UP form spacing in control row */
+.club-controls form,
+.club-controls input,
+.club-controls select,
+.club-controls button {
+  margin: 0;
+}
+
+/* Ensure perfect vertical alignment */
+.club-controls {
+  display: flex;
+  align-items: center;
+
+}
+
+/* Cyclists page  */
+.cyclist-page-content {
+  margin: 1.5rem;
+
+}
+/* Horizontal controls row */
+.cyclist-controls {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* Make search input wider */
+.cyclist-controls input[type="text"] {
+  max-width: 250px;
+}
+
+/* Club form inline */
+.cyclist-form {
+  display: flex;
+  align-items: center;
+}
+
+/* Kill HTML5 UP form spacing in control row */
+.cyclist-controls form,
+.cyclist-controls input,
+.cyclist-controls select,
+.cyclist-controls button {
+  margin: 0;
+}
+
+/* Ensure perfect vertical alignment */
+.cyclist-controls {
+  display: flex;
+  align-items: center;
+
+}
+
+/* Detail page container */
+.club-detail-page {
+  margin: 2rem;
+  max-width: 700px;
+}
+.cyclist-detail-page {
+  margin: 2rem;
+  max-width: 700px;
+}

@@ -41,7 +41,7 @@ const ClubDetail = () => {
   if (!club) return <div>Loading...</div>;
 
   return (
-    <div>
+    <div className="club-detail-page">
       <h2>Club Detail</h2>
 
       <div>

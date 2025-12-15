@@ -20,19 +20,19 @@ const ClubForm = ({ fetchClubs }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
+    <form onSubmit={handleSubmit} className="club-form">
+    <input
         type="text"
         placeholder="Club name"
         value={nom}
         onChange={(e) => setNom(e.target.value)}
         required
-      />
-      <select value={mixite} onChange={(e) => setMixite(e.target.value)}>
+    />
+    <select value={mixite} onChange={(e) => setMixite(e.target.value)}>
         <option value="Oui">Oui</option>
         <option value="Non">Non</option>
-      </select>
-      <button type="submit">Add Club</button>
+    </select>
+    <button type="submit">Add Club</button>
     </form>
   );
 };
