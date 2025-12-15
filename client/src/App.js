@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Dashboard from "./components/Dashboard";
+import HomePage from "./pages/HomePage";
 import ClubsPage from "./pages/ClubsPage";
 import CyclistsPage from "./pages/CyclistsPage";
 import ClubDetail from "./pages/ClubDetail";
@@ -9,13 +9,23 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <nav>
-        <Link to="/">Dashboard</Link> |{" "}
-        <Link to="/clubs">Clubs</Link> |{" "}
-        <Link to="/cyclists">Cyclists</Link>
-      </nav>
+      <div id="wrapper">
+        {/* Header */}
+        <header id="header">
+          <h1>Women Cyclists in France</h1>
+
+          {/* HTML5 UP Nav */}
+          <nav>
+            <ul>
+              <li><Link to="/">Home Page</Link></li>
+              <li><Link to="/clubs">Clubs</Link></li>
+              <li><Link to="/cyclists">Cyclists</Link></li>
+            </ul>
+          </nav>
+        </header>
+      </div>
       <Routes>
-        <Route path="/" element={<Dashboard />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/clubs" element={<ClubsPage />} />
         <Route path="/cyclists" element={<CyclistsPage />} />
         <Route path="/clubs/:id" element={<ClubDetail />} />

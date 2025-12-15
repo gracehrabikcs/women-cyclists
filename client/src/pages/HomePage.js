@@ -18,22 +18,12 @@ const HomePage = () => {
 
   return (
     <div id="wrapper">
-      <header id="header">
-        <h1>Women Cyclists in France Dashboard</h1>
-      </header>
-
+      {/* Main Content */}
       <section id="main">
         <div className="inner">
-          <div style={{ marginBottom: "2rem" }}>
-            <h2>Overview</h2>
-            <p>Clubs: {clubCount}</p>
-            <p>Cyclists: {cyclistCount}</p>
-          </div>
-
-          <div>
-            <Link to="/clubs" className="button">View Clubs</Link>
-            <Link to="/cyclists" className="button" style={{ marginLeft: "1rem" }}>View Cyclists</Link>
-          </div>
+          <h2>Overview</h2>
+          <p><strong>Clubs:</strong> {clubCount}</p>
+          <p><strong>Cyclists:</strong> {cyclistCount}</p>
         </div>
       </section>
     </div>
