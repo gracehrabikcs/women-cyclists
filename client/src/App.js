@@ -9,8 +9,15 @@ function App() {
   return (
     <Router>
         {/* Header */}
-        <header id="header">
-          <h1>Women Cyclists in France</h1>
+        <header id="header" className="site-header">
+          <div className="header-brand">
+            <img
+              src={`${process.env.PUBLIC_URL}/logo512.png`}
+              alt="Women Cyclists in France logo"
+              className="site-logo"
+            />
+            <h1>Women Cyclists in France</h1>
+          </div>
           {/* HTML5 UP Nav */}
           <nav className="main-nav">
             <ul>
