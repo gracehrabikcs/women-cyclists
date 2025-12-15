@@ -4,18 +4,15 @@ import ClubsPage from "./pages/ClubsPage";
 import CyclistsPage from "./pages/CyclistsPage";
 import ClubDetail from "./pages/ClubDetail";
 import CyclistDetail from "./pages/CyclistDetail";
-import './App.css';
 
 function App() {
   return (
     <Router>
-      <div id="wrapper">
         {/* Header */}
         <header id="header">
           <h1>Women Cyclists in France</h1>
-
           {/* HTML5 UP Nav */}
-          <nav>
+          <nav className="main-nav">
             <ul>
               <li><Link to="/">Home Page</Link></li>
               <li><Link to="/clubs">Clubs</Link></li>
@@ -23,7 +20,6 @@ function App() {
             </ul>
           </nav>
         </header>
-      </div>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/clubs" element={<ClubsPage />} />

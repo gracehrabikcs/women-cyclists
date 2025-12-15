@@ -17,15 +17,10 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div id="wrapper">
-      {/* Main Content */}
-      <section id="main">
-        <div className="inner">
-          <h2>Overview</h2>
-          <p><strong>Clubs:</strong> {clubCount}</p>
-          <p><strong>Cyclists:</strong> {cyclistCount}</p>
-        </div>
-      </section>
+    <div className="home-page-content">
+      <h2>Overview</h2>
+      <p><strong>Clubs:</strong> {clubCount}</p>
+      <p><strong>Cyclists:</strong> {cyclistCount}</p>
     </div>
   );
 };
